@@ -1,25 +1,40 @@
 const choices = ["Rock", "Paper", "Scissors"]
-let computerChoice = ""
-let playerChoice = ""
+let computerSelection = ""
+let playerSelection = ""
+let computerScore = 0
+let playerScore = 0
 
 function getRandomComputerChoice() {
 	let randomNumber = Math.floor(Math.random() * 3)
-	computerChoice = choices[randomNumber]
+	computerSelection = choices[randomNumber]
 }
-
-getRandomComputerChoice()
-console.log(`Computer choice : ${computerChoice}`)
 
 const rockButton = document.querySelector('.rock-button')
 const paperButton = document.querySelector('.paper-button')
 const scissorsButton = document.querySelector('.scissors-button')
 const randomButton = document.querySelector('.random-button')
 
-function getPlayerChoice(choice) {
-	playerChoice = choice
-	console.log(`Player Choice : ${playerChoice}`)
-}
+rockButton.addEventListener("click", () => playOneRound("Rock"))
+paperButton.addEventListener("click", () => playOneRound("Paper"))
+scissorsButton.addEventListener("click", () => playOneRound("Scissors"))
 
-rockButton.addEventListener("click", () => getPlayerChoice("Rock"))
-paperButton.addEventListener("click", () => getPlayerChoice("Paper"))
-scissorsButton.addEventListener("click", () => getPlayerChoice("Scissors"))
+function playOneRound(playerSelection) {
+	getRandomComputerChoice()
+	console.log(`Computer selection : ${computerSelection}`)
+	console.log(`Player Selection : ${playerSelection}`)
+	if (computerSelection === playerSelection) {
+		console.log(`It's a tie`)
+	} else if
+		(
+		computerSelection === "Rock" && playerSelection === "Scissors" ||
+		computerSelection === "Paper" && playerSelection === "Rock" ||
+		computerSelection === "Scissors" && playerSelection === "Paper"
+	) {
+		console.log("Computer won")
+		computerScore++
+	} else {
+		console.log("Player won")
+		playerScore++
+	}
+	console.log(`Computer ${computerScore} - ${playerScore} Player`)
+}
