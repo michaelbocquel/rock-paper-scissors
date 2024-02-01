@@ -1,0 +1,26 @@
+:root {
+	--gold: #ffd700;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	background-color: #080600;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+}
+
+button {
+	width: 200px;
+	height: 60px;
+	color: var(--gold);
+	border: 1px solid var(--gold);
+	background-color: #080600;
+}
