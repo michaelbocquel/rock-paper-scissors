@@ -27,10 +27,22 @@ function getRandomComputerChoice() {
 	computerSelection = choices[randomNumber]
 }
 
+function resetGame() {
+	computerSelection = ""
+	playerSelection = ""
+	computerScore = 0
+	playerScore = 0
+	rockButton.disabled = false
+	paperButton.disabled = false
+	scissorsButton.disabled = false
+	winnerContainer.classList.add('is-hidden')
+	playAgainButton.classList.add('is-hidden')
+	roundSummaryContainer.textContent = ''
+	scoreContainer.textContent = ''
+}
+
 function playOneRound(playerSelection) {
 	getRandomComputerChoice()
-	console.log(`Computer selection : ${computerSelection}`)
-	console.log(`Player Selection : ${playerSelection}`)
 	if (computerSelection === playerSelection) {
 		roundSummaryContainer.textContent = `It's a tie`
 	} else if
@@ -58,17 +70,6 @@ function playOneRound(playerSelection) {
 	} else if (computerScore === 5) {
 		winnerContainer.textContent = 'Computer won'
 	}
-	playAgainButton.onclick = () => {
-		computerSelection = ""
-		playerSelection = ""
-		computerScore = 0
-		playerScore = 0
-		rockButton.disabled = false
-		paperButton.disabled = false
-		scissorsButton.disabled = false
-		winnerContainer.classList.add('is-hidden')
-		playAgainButton.classList.add('is-hidden')
-		roundSummaryContainer.textContent = ''
-		scoreContainer.textContent = ''
-	}
-} 
+}
+
+playAgainButton.addEventListener('click', resetGame)
