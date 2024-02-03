@@ -52,3 +52,18 @@ button {
 	border: 1px solid var(--gold);
 	background-color: #080600;
 }
+
+.winner-container {
+	width: 400px;
+	height: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--gold);
+	border: 1px solid var(--gold);
+	background-color: #080600;
+}
+
+.is-hidden {
+	visibility: hidden;
+}
