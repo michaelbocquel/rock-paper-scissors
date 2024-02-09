@@ -10,7 +10,9 @@ const scissorsButton = document.querySelector('.scissors-button')
 const randomButton = document.querySelector('.random-button')
 
 const roundSummaryContainer = document.querySelector('.round-summary-container')
+roundSummaryContainer.textContent = `Waiting for battle to begin...`
 const scoreContainer = document.querySelector('.score-container')
+scoreContainer.textContent = `Player ${playerScore} - ${computerScore} Computer`
 
 const winnerContainer = document.querySelector('.winner-container')
 const playAgainButton = document.querySelector('.play-again-button')
@@ -37,8 +39,8 @@ function resetGame() {
 	scissorsButton.disabled = false
 	winnerContainer.classList.add('is-hidden')
 	playAgainButton.classList.add('is-hidden')
-	roundSummaryContainer.textContent = ''
-	scoreContainer.textContent = ''
+	roundSummaryContainer.textContent = roundSummaryContainer.textContent = `Waiting for battle to begin...`
+	scoreContainer.textContent = `Player ${playerScore} - ${computerScore} Computer`
 }
 
 function playOneRound(playerSelection) {
