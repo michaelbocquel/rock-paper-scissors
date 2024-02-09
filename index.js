@@ -39,7 +39,9 @@ function resetGame() {
 	scissorsButton.disabled = false
 	winnerContainer.classList.add('is-hidden')
 	playAgainButton.classList.add('is-hidden')
-	roundSummaryContainer.textContent = roundSummaryContainer.textContent = `Waiting for battle to begin...`
+	roundSummaryContainer.textContent = `Waiting for battle to begin...`
+	roundSummaryContainer.style.border = `1px solid var(--gold)`
+	roundSummaryContainer.style.color = `var(--gold)`
 	scoreContainer.textContent = `Player ${playerScore} - ${computerScore} Computer`
 }
 
@@ -47,6 +49,10 @@ function playOneRound(playerSelection) {
 	getRandomComputerChoice()
 	if (computerSelection === playerSelection) {
 		roundSummaryContainer.textContent = `It's a tie`
+		roundSummaryContainer.style.border = `1px solid white`
+		roundSummaryContainer.style.color = `white`
+		scoreContainer.style.border = `1px solid white`
+		scoreContainer.style.color = `white`
 	} else if
 		(
 		computerSelection === "Rock" && playerSelection === "Scissors" ||
@@ -54,9 +60,17 @@ function playOneRound(playerSelection) {
 		computerSelection === "Scissors" && playerSelection === "Paper"
 	) {
 		roundSummaryContainer.textContent = `You've been beaten, ${computerSelection} crushes ${playerSelection}`
+		roundSummaryContainer.style.border = `1px solid red`
+		roundSummaryContainer.style.color = `red`
+		scoreContainer.style.border = `1px solid red`
+		scoreContainer.style.color = `red`
 		computerScore++
 	} else {
 		roundSummaryContainer.textContent = `You smashed that computer into pieces, ${playerSelection} flattens ${computerSelection}`
+		roundSummaryContainer.style.border = `1px solid green`
+		roundSummaryContainer.style.color = `green`
+		scoreContainer.style.border = `1px solid green`
+		scoreContainer.style.color = `green`
 		playerScore++
 	}
 	scoreContainer.textContent = `Player ${playerScore} - ${computerScore} Computer`
@@ -69,8 +83,12 @@ function playOneRound(playerSelection) {
 	}
 	if (playerScore === 5) {
 		winnerContainer.textContent = 'Player won'
+		winnerContainer.style.border = `1px solid green`
+		winnerContainer.style.color = `green`
 	} else if (computerScore === 5) {
 		winnerContainer.textContent = 'Computer won'
+		winnerContainer.style.border = `1px solid red`
+		winnerContainer.style.color = `red`
 	}
 }
 
