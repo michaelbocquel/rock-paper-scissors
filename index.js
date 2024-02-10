@@ -25,12 +25,11 @@ roundSummaryContainer.textContent = `Waiting for battle to begin...`
 const scoreContainer = document.querySelector('.score-container')
 scoreContainer.textContent = `Player ${playerScore} - ${computerScore} Computer`
 
+const endgameContainer = document.querySelector('.endgame-container')
 const winnerContainer = document.querySelector('.winner-container')
-
 const playAgainButton = document.querySelector('.play-again-button')
 
-winnerContainer.classList.add('is-hidden')
-playAgainButton.classList.add('is-hidden')
+endgameContainer.classList.add('is-hidden')
 
 rockButton.addEventListener("click", () => playOneRound("Rock"))
 paperButton.addEventListener("click", () => playOneRound("Paper"))
@@ -50,8 +49,7 @@ function resetGame() {
 	rockButton.disabled = false
 	paperButton.disabled = false
 	scissorsButton.disabled = false
-	winnerContainer.classList.add('is-hidden')
-	playAgainButton.classList.add('is-hidden')
+	endgameContainer.classList.add('is-hidden')
 	currentRoundContainer.style.border = `1px solid var(--gold)`
 	currentRoundContainer.style.color = `var(--gold)`
 	currentRound.textContent = `Please make your pick`
@@ -95,8 +93,7 @@ function playOneRound(playerSelection) {
 	currentRound.textContent = `Round ${currentRoundNumber}`
 	scoreContainer.textContent = `Player ${playerScore} - ${computerScore} Computer`
 	if (playerScore === 5 || computerScore === 5) {
-		winnerContainer.classList.remove('is-hidden')
-		playAgainButton.classList.remove('is-hidden')
+		endgameContainer.classList.remove('is-hidden')
 		rockButton.disabled = true
 		paperButton.disabled = true
 		scissorsButton.disabled = true

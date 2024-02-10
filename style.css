@@ -15,10 +15,6 @@
 body {
 	height: 100vh;
 	background-color: var(--black);
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
 }
 
 .button-container {
@@ -36,7 +32,7 @@ button {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	font-size: 30px;
+	font-size: 24px;
 	padding: 20px;
 	color: var(--gold);
 	border: none;
@@ -47,46 +43,55 @@ button {
 }
 
 .current-round-container {
+	margin: 30px auto 0;
+	width: 600px;
 	color: var(--gold);
 	border: 1px solid var(--gold);
 }
 
 .current-round {
-	width: 500px;
-	height: 60px;
+	padding: 20px;
+	font-size: 30px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
 .pick-display {
+	padding: 20px;
 	display: flex;
 	justify-content: space-around;
 }
 
 .round-summary-container {
-	width: 500px;
-	height: 60px;
+	padding: 20px;
+	height: 70px;
+	font-size: 24px;
+	text-align: center;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
 .score-container {
+	padding: 20px;
+	font-size: 30px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
 .endgame-container {
+	margin: 40px auto 0;
 	display: flex;
 	flex-direction: column;
+	width: 600px;
 }
 
 .winner-container {
 	text-align: center;
 	background-color: var(--black);
-	font-size: 30px;
+	font-size: 36px;
 }
 
 .play-again-button {
@@ -97,6 +102,8 @@ button {
 }
 
 .footer {
+	position: absolute;
+	bottom: 0;
 	width: 100vw;
 	color: var(--gold);
 	font-size: 24px;
