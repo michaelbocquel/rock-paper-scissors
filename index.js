@@ -7,7 +7,6 @@ let playerScore = 0
 const rockButton = document.querySelector('.rock-button')
 const paperButton = document.querySelector('.paper-button')
 const scissorsButton = document.querySelector('.scissors-button')
-const randomButton = document.querySelector('.random-button')
 
 const roundSummaryContainer = document.querySelector('.round-summary-container')
 roundSummaryContainer.textContent = `Waiting for battle to begin...`
@@ -43,6 +42,8 @@ function resetGame() {
 	roundSummaryContainer.style.border = `1px solid var(--gold)`
 	roundSummaryContainer.style.color = `var(--gold)`
 	scoreContainer.textContent = `Player ${playerScore} - ${computerScore} Computer`
+	scoreContainer.style.border = `1px solid var(--gold)`
+	scoreContainer.style.color = `var(--gold)`
 }
 
 function playOneRound(playerSelection) {
@@ -85,10 +86,14 @@ function playOneRound(playerSelection) {
 		winnerContainer.textContent = 'Player won'
 		winnerContainer.style.border = `1px solid green`
 		winnerContainer.style.color = `green`
+		playAgainButton.style.border = `1px solid green`
+		playAgainButton.style.color = `green`
 	} else if (computerScore === 5) {
 		winnerContainer.textContent = 'Computer won'
 		winnerContainer.style.border = `1px solid red`
 		winnerContainer.style.color = `red`
+		playAgainButton.style.border = `1px solid red`
+		playAgainButton.style.color = `red`
 	}
 }
 

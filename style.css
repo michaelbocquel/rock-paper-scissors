@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
 :root {
 	--gold: #ffd700;
 }
@@ -6,6 +8,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: 'Indie Flower', cursive;
 }
 
 body {
@@ -20,15 +23,26 @@ body {
 .button-container {
 	display: flex;
 	justify-content: center;
-	gap: 20px;
+	gap: 40px;
 }
 
 button {
-	width: 200px;
-	height: 60px;
 	color: var(--gold);
-	border: 1px solid var(--gold);
 	background-color: #080600;
+}
+
+.pick-button {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 24px;
+	padding: 20px;
+	color: var(--gold);
+	border: none;
+}
+
+.pick-img {
+	margin-bottom: 20px;
 }
 
 .round-summary-container {
@@ -59,7 +73,11 @@ button {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	color: var(--gold);
+	background-color: #080600;
+}
+
+.play-again-button {
+	padding: 20px;
 	border: 1px solid var(--gold);
 	background-color: #080600;
 }
