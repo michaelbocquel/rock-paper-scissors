@@ -84,13 +84,11 @@ function playOneRound(playerSelection) {
 	}
 	if (playerScore === 5) {
 		winnerContainer.textContent = 'Player won'
-		winnerContainer.style.border = `1px solid green`
 		winnerContainer.style.color = `green`
 		playAgainButton.style.border = `1px solid green`
 		playAgainButton.style.color = `green`
 	} else if (computerScore === 5) {
 		winnerContainer.textContent = 'Computer won'
-		winnerContainer.style.border = `1px solid red`
 		winnerContainer.style.color = `red`
 		playAgainButton.style.border = `1px solid red`
 		playAgainButton.style.color = `red`

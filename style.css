@@ -2,6 +2,7 @@
 
 :root {
 	--gold: #ffd700;
+	--black: #080600;
 }
 
 * {
@@ -13,10 +14,10 @@
 
 body {
 	height: 100vh;
-	background-color: #080600;
+	background-color: var(--black);
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-items: center;
 }
 
@@ -28,14 +29,14 @@ body {
 
 button {
 	color: var(--gold);
-	background-color: #080600;
+	background-color: var(--black);
 }
 
 .pick-button {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	font-size: 24px;
+	font-size: 30px;
 	padding: 20px;
 	color: var(--gold);
 	border: none;
@@ -53,7 +54,7 @@ button {
 	align-items: center;
 	color: var(--gold);
 	border: 1px solid var(--gold);
-	background-color: #080600;
+	background-color: var(--black);
 }
 
 .score-container {
@@ -64,22 +65,38 @@ button {
 	align-items: center;
 	color: var(--gold);
 	border: 1px solid var(--gold);
-	background-color: #080600;
+	background-color: var(--black);
+}
+
+.endgame-container {
+	display: flex;
+	flex-direction: column;
 }
 
 .winner-container {
-	width: 400px;
-	height: 60px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: #080600;
+	text-align: center;
+	background-color: var(--black);
+	font-size: 30px;
 }
 
 .play-again-button {
 	padding: 20px;
 	border: 1px solid var(--gold);
-	background-color: #080600;
+	font-size: 30px;
+	margin-top: 30px;
+}
+
+.footer {
+	width: 100vw;
+	color: var(--gold);
+	font-size: 24px;
+	padding: 10px;
+	border-top: 3px solid var(--gold);
+	text-align: center;
+}
+
+.footer a {
+	color: var(--gold);
 }
 
 .is-hidden {
