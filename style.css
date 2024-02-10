@@ -46,6 +46,17 @@ button {
 	margin-bottom: 20px;
 }
 
+.current-round {
+	width: 500px;
+	height: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--gold);
+	border: 1px solid var(--gold);
+	background-color: var(--black);
+}
+
 .round-summary-container {
 	width: 500px;
 	height: 60px;
