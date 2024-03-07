@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
 
 :root {
 	--gold: #ffd700;
@@ -9,12 +9,17 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: 'Indie Flower', cursive;
+	font-family: "Indie Flower", cursive;
 }
 
 body {
-	height: 100vh;
 	background-color: var(--black);
+}
+
+.grid-container {
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr 58px;
+	min-height: 100vh;
 }
 
 .button-container {
@@ -98,13 +103,11 @@ button {
 	padding: 20px;
 	border: 1px solid var(--gold);
 	font-size: 30px;
-	margin-top: 30px;
+	margin: 30px 0 50px;
 }
 
 .footer {
-	position: absolute;
-	bottom: 0;
-	width: 100vw;
+	align-self: end;
 	color: var(--gold);
 	font-size: 24px;
 	padding: 10px;
@@ -118,4 +121,20 @@ button {
 
 .is-hidden {
 	visibility: hidden;
+}
+
+@media screen and (max-width: 600px) {
+	.button-container {
+		gap: 0px;
+	}
+	.pick-button {
+		scale: 0.8;
+		margin: 0 -10px;
+	}
+	.current-round-container {
+		max-width: 80%;
+	}
+	.endgame-container {
+		max-width: 80%;
+	}
 }

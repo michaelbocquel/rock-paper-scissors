@@ -1,42 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Rock Paper Scissors | nismoDev</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Rock Paper Scissors | nismoDev</title>
-	<link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-	<div class="button-container">
-		<button class="pick-button rock-button">
-			<img class="pick-img" src="./images/rock.png" alt="Rock Button" />Rock</button>
-		<button class="pick-button paper-button">
-			<img class="pick-img" src="./images/paper.png" alt="Paper Button" />Paper</button>
-		<button class="pick-button scissors-button">
-			<img class="pick-img" src="./images/scissors.png" alt="Scissors Button" />Scissors</button>
-	</div>
-
-	<div class="current-round-container">
-		<div class="current-round"></div>
-		<div class="pick-display">
-			<img class="player-pick-display" alt="">
-			<img class="computer-pick-display" src="" alt="">
+	<body>
+		<div class="grid-container">
+			<div class="button-container">
+				<button class="pick-button rock-button">
+					<img
+						class="pick-img"
+						src="./images/rock.png"
+						alt="Rock Button"
+					/>
+					Rock
+				</button>
+				<button class="pick-button paper-button">
+					<img
+						class="pick-img"
+						src="./images/paper.png"
+						alt="Paper Button"
+					/>
+					Paper
+				</button>
+				<button class="pick-button scissors-button">
+					<img
+						class="pick-img"
+						src="./images/scissors.png"
+						alt="Scissors Button"
+					/>
+					Scissors
+				</button>
+			</div>
+			<div class="current-round-container">
+				<div class="current-round"></div>
+				<div class="pick-display">
+					<img class="player-pick-display" alt="" />
+					<img class="computer-pick-display" src="" alt="" />
+				</div>
+				<div class="round-summary-container"></div>
+				<div class="score-container"></div>
+			</div>
+			<div class="endgame-container">
+				<div class="winner-container">The winner is ...</div>
+				<button class="play-again-button">Play again !</button>
+			</div>
+			<p class="footer">Performed by nismo.dev</p>
 		</div>
-		<div class="round-summary-container"></div>
-		<div class="score-container"></div>
-	</div>
 
-	<div class="endgame-container">
-		<div class="winner-container"></div>
-		<button class="play-again-button">Play again !</button>
-	</div>
-
-	<p class="footer">Performed by nismo.dev, <a href="https://www.flaticon.com/free-icons/hands-and-gestures"
-			title="hands and gestures icons">Hands and gestures icons created by Cuputo - Flaticon</a></p>
-
-	<script src="index.js"></script>
-</body>
-
+		<script src="index.js"></script>
+	</body>
 </html>
