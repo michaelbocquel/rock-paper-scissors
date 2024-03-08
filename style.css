@@ -17,14 +17,15 @@ body {
 }
 
 .grid-container {
-	display: grid;
-	grid-template-rows: 1fr 1fr 1fr 58px;
 	min-height: 100vh;
+	display: grid;
+	justify-items: center;
 }
 
 .button-container {
-	display: flex;
-	justify-content: center;
+	width: clamp(200px, 80%, 600px);
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
 	gap: 40px;
 }
 
@@ -49,7 +50,7 @@ button {
 
 .current-round-container {
 	margin: 30px auto 0;
-	width: 600px;
+	width: clamp(200px, 60%, 600px);
 	color: var(--gold);
 	border: 1px solid var(--gold);
 }
@@ -64,8 +65,8 @@ button {
 
 .pick-display {
 	padding: 20px;
-	display: flex;
-	justify-content: space-around;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
 }
 
 .round-summary-container {
@@ -90,7 +91,7 @@ button {
 	margin: 40px auto 0;
 	display: flex;
 	flex-direction: column;
-	width: 600px;
+	width: clamp(200px, 60%, 600px);
 }
 
 .winner-container {
@@ -107,6 +108,7 @@ button {
 }
 
 .footer {
+	width: 100vw;
 	align-self: end;
 	color: var(--gold);
 	font-size: 24px;
@@ -115,26 +117,45 @@ button {
 	text-align: center;
 }
 
-.footer a {
-	color: var(--gold);
-}
-
 .is-hidden {
 	visibility: hidden;
 }
 
 @media screen and (max-width: 600px) {
 	.button-container {
+		width: 85%;
 		gap: 0px;
 	}
 	.pick-button {
-		scale: 0.8;
-		margin: 0 -10px;
+		margin: 0 -20px;
+		padding: 0;
+	}
+	.pick-img {
+		width: 64px;
+		margin-bottom: 5px;
 	}
 	.current-round-container {
-		max-width: 80%;
+		width: 85%;
+		margin: 0;
+		padding: 0;
+	}
+	.current-round {
+		padding: 10px 0 0;
+		font-size: 26px;
+	}
+	.score-container {
+		font-size: 24px;
+		padding: 10px 0 0;
 	}
 	.endgame-container {
-		max-width: 80%;
+		width: 85%;
+		margin-top: 10px;
+	}
+	.play-again-button {
+		margin: 10px 0 0;
+		padding: 10px 0;
+		font-size: 24px;
+	}
+	.footer {
 	}
 }
